@@ -1,0 +1,8 @@
+C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpExcalibur\SharpExcelibur\bin\x86\Release\SharpExcelibur.exe.config
+C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpExcalibur\SharpExcelibur\bin\x86\Release\SharpExcelibur.exe
+C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpExcalibur\SharpExcelibur\bin\x86\Release\SharpExcelibur.pdb
+C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpExcalibur\SharpExcelibur\obj\x86\Release\SharpExcelibur.csproj.ResolveComReference.cache
+C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpExcalibur\SharpExcelibur\obj\x86\Release\SharpExcelibur.csproj.CoreCompileInputs.cache
+C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpExcalibur\SharpExcelibur\obj\x86\Release\SharpExcelibur.csproj.Fody.CopyLocal.cache
+C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpExcalibur\SharpExcelibur\obj\x86\Release\SharpExcelibur.exe
+C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpExcalibur\SharpExcelibur\obj\x86\Release\SharpExcelibur.pdb
