@@ -1,7 +1,0 @@
-C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpSword\SharpSword\bin\Release\SharpSword.exe.config
-C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpSword\SharpSword\bin\Release\SharpSword.exe
-C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpSword\SharpSword\bin\Release\SharpSword.pdb
-C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpSword\SharpSword\obj\Release\SharpSword.csprojAssemblyReference.cache
-C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpSword\SharpSword\obj\Release\SharpSword.csproj.CoreCompileInputs.cache
-C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpSword\SharpSword\obj\Release\SharpSword.exe
-C:\Users\tester\Desktop\PROJECTS\Source_Code\SharpSword\SharpSword\obj\Release\SharpSword.pdb
