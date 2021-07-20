@@ -6,4 +6,4 @@ Help: SharpExcelibur.exe
 
 OPSEC: Tool uses Microsoft.Office.Interop.Excel... will spawn a temporary Excel process to retrieve worksheet data.
 
-![image](https://user-images.githubusercontent.com/1459500/126002052-58067f7f-48b6-4308-a910-64fe3999bc8f.png)
+![image](https://user-images.githubusercontent.com/1459500/126264038-6ae2d1c4-1d62-4a2a-b45f-bb1ab2da6642.png)
