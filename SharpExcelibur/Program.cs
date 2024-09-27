@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Runtime.InteropServices;
@@ -179,20 +179,8 @@ namespace SharpExcelibur
                             int rowCount = xlRange.Rows.Count;
                             int colCount = xlRange.Columns.Count;
 
-                            for (int i = 1; i <= rowCount; i++)
-                            {
-                                for (int j = 1; j <= colCount; j++)
-                                {
-                                    //new line
-                                    if (j == 1)
-                                        Console.Write("\r\n");
+                            PrintExcelGrid(xlRange, rowCount, colCount);
 
-                                    //write the value to the console
-                                    if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Text != null)
-                                    Console.Write(xlRange.Cells[i, j].Text.ToString() + "\t");
-                                }
-                                
-                            }
                             xlWorkbook.Close(false, null, null);
                             xlApp.Quit();
                             Marshal.ReleaseComObject(xlWorksheet);
@@ -243,20 +231,8 @@ namespace SharpExcelibur
                                 int rowCount = xlRange.Rows.Count;
                                 int colCount = xlRange.Columns.Count;
 
-                                for (int i = 1; i <= rowCount; i++)
-                                {
-                                    for (int j = 1; j <= colCount; j++)
-                                    {
-                                        //new line
-                                        if (j == 1)
-                                            Console.Write("\r\n");
+                                PrintExcelGrid(xlRange, rowCount, colCount);
 
-                                        //write the value to the console
-                                        if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Text != null)
-                                            Console.Write(xlRange.Cells[i, j].Text.ToString() + "\t");
-                                    }
-
-                                }
                                 xlWorkbook.Close(false, null, null);
                                 xlApp.Quit();
                                 Marshal.ReleaseComObject(xlWorksheet);
@@ -300,6 +276,53 @@ namespace SharpExcelibur
 
             }
 
+        }
+
+        static void PrintExcelGrid(Excel.Range xlRange, int rowCount, int colCount)
+        {
+            int[] maxLengths = new int[colCount];
+            string[,] cellContents = new string[rowCount, colCount];
+
+            // First pass: store contents and find max lengths
+            for (int i = 1; i <= rowCount; i++)
+            {
+                for (int j = 1; j <= colCount; j++)
+                {
+                    string content = xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Text != null
+                        ? xlRange.Cells[i, j].Text.ToString()
+                        : "";
+                    cellContents[i - 1, j - 1] = content;
+                    maxLengths[j - 1] = Math.Max(maxLengths[j - 1], content.Length);
+                }
+            }
+
+            // Print top border
+            PrintHorizontalBorder(maxLengths);
+
+            // Print rows
+            for (int i = 0; i < rowCount; i++)
+            {
+                Console.Write("|");
+                for (int j = 0; j < colCount; j++)
+                {
+                    Console.Write(" " + cellContents[i, j].PadRight(maxLengths[j]) + " |");
+                }
+                Console.WriteLine();
+
+                // Print horizontal border between rows
+                PrintHorizontalBorder(maxLengths);
+            }
+        }
+
+        static void PrintHorizontalBorder(int[] maxLengths)
+        {
+            Console.Write("+");
+            for (int j = 0; j < maxLengths.Length; j++)
+            {
+                Console.Write(new string('-', maxLengths[j] + 2));
+                Console.Write(j < maxLengths.Length - 1 ? "+" : "+");
+            }
+            Console.WriteLine();
         }
     }
 }
